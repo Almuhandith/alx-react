@@ -14,3 +14,6 @@ const updateCounter = () => {
     $('#count').html(`${times} clicks on the button`);
   });
 };
+
+_.debounce(updateCounter, 200);
+updateCounter();
