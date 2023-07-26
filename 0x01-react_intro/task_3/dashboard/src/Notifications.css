@@ -1,0 +1,4 @@
+.Notifications {
+  border: 1px dashed var(--brand-color);
+  padding: 2rem;
+}

@@ -1,0 +1,30 @@
+:root {
+  --brand-color: #e1003C;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  color: var(--brand-color);
+  border-bottom: 4px solid var(--brand-color);
+}
+
+.App-body {
+  text-align: left;
+}
+
+.App-footer {
+  border-top: 4px solid var(--brand-color);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
