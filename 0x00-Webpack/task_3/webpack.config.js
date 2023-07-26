@@ -5,23 +5,39 @@ const path = require('path');
 module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html'
+      filename: './index.html'
     }),
     new CleanWebpackPlugin()
   ],
+  devtool: 'inline-source-map',
   mode: 'development',
   entry: {
-    header: './modules/header/header.js',
-    body: './modules/body/body.js',
-    footer: './modules/footer/footer.js',
+    header: {
+      import: './modules/header/header.js',
+      dependOn: 'shared',
+    },
+    body: {
+      import: './modules/body/body.js',
+      dependOn: 'shared',
+    },
+    footer: {
+      import: './modules/footer/footer.js',
+      dependOn: 'shared',
+    },
+    shared: 'jquery'
   },
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: '[name].bundle.js',
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   devServer: {
-    contentBase: path.join(__dirname, './public'),
-    compress: true,
+    static: path.join(__dirname, './public'),
+    open: true,
     port: 8564,
   },
   performance: {
