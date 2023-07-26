@@ -1,11 +1,13 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack Output",
+      filename: 'index.html'
     }),
+    new CleanWebpackPlugin()
   ],
   mode: 'development',
   entry: {
