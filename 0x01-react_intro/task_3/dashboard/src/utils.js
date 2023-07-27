@@ -12,7 +12,7 @@ const getFooterCopy = (isIndex) => {
 }
 
 const getLatestNotification = () => {
-  return "<strong>Urgent requirement</strong> - complete by EOD"
+  return "<strong>Urgent Requirement</strong> - complete by EOD"
 }
 
 module.exports = {
