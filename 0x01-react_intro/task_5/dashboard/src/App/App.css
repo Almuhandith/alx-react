@@ -1,7 +1,11 @@
+:root {
+  --brand-color: #e1003C;
+}
+
 .App {
 	height: 100vh;
 	max-width: 100vw;
-	--border-bottom: 4px solid red;
+	--border-bottom: 3px solid var(--brand-color);
 	--padding: 1.2em;
 	--heading-font-size: 1.4rem;
 	--gen-font-size: 1.4rem;
@@ -9,7 +13,7 @@
 
 .App-header {
 	font-size: var(--heading-font-size);
-	color: red;
+	color: var(--brand-color);
 	display: flex;
 	align-items: center;
 	padding: var(--padding);

@@ -1,6 +1,6 @@
 .Notifications {
 	padding: 2em;
-	border: 2px dashed red;
+	border: 2px dashed var(--brand-color);
 }
 
 ul li[data='default'] {
@@ -8,5 +8,5 @@ ul li[data='default'] {
 }
 
 ul li[data='urgent'] {
-	color: red;
+	color: var(--brand-color);
 }
