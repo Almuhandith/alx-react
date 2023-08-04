@@ -1,0 +1,22 @@
+
+
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #e1003C;
+  color: #e1003C;
+}
+
+.App-header img {
+  height: 40vmin
+}
+
+.App-body {
+  min-height: 40vh;
+}
+
+.App-footer {
+  text-align: center;
+  font-style: italic;
+  border-top: 3px solid #e1003C;
+}
