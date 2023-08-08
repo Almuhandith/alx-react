@@ -2,3 +2,11 @@
   border: 1px dashed #e1003C;
   padding: 2rem;
 }
+
+li[data-priority='default'] {
+  color: blue;
+}
+
+li[data-priority='urgent'] {
+  color: #e1003C;
+}
