@@ -45,7 +45,7 @@ class App extends React.Component {
             <Header />
             <Notifications listNotifications={this.listNotifications} />
           </div>
-          <div className={css(styles.Body)}>
+          <div className={css(styles.body)}>
             {this.props.isLoggedIn ? (
               <BodySectionWithMarginBottom title='Course list'>
                 <CourseList listCourses={this.listCourses} />
@@ -62,7 +62,7 @@ class App extends React.Component {
               </p>
             </BodySection>
           </div>
-          <div className={css(styles.Footer)}>
+          <div className={css(styles.footer)}>
             <Footer />
           </div>
         </div>
@@ -83,10 +83,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderBottom: '3px solid #e0354b'
   },
-  Body: {
+  body: {
     minHeight: '50vh'
   },
-  Footer: {
+  footer: {
     fontSize: '1rem',
     padding: '1.2rem',
     textAlign: 'center',
