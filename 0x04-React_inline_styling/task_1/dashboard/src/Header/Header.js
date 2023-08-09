@@ -11,7 +11,7 @@ const Header = () => {
   )
 }
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   header: {
     fontSize: '1.4rem',
     color: '#e0354b',
