@@ -45,22 +45,26 @@ class App extends React.Component {
             <Header />
             <Notifications listNotifications={this.listNotifications} />
           </div>
-          {this.props.isLoggedIn ? (
-            <BodySectionWithMarginBottom title='Course list'>
-              <CourseList listCourses={this.listCourses} />
-            </BodySectionWithMarginBottom>
-          ) : (
-            <BodySectionWithMarginBottom title='Log in to continue'>
-              <Login />
-            </BodySectionWithMarginBottom>
-          )}
-          <BodySection title="News from the school">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis at tempora odio, necessitatibus repudiandae reiciendis cum nemo sed asperiores ut molestiae eaque aliquam illo ipsa
-              iste vero dolor voluptates.
-            </p>
-          </BodySection>
-          <Footer />
+          <div className={css(styles.Body)}>
+            {this.props.isLoggedIn ? (
+              <BodySectionWithMarginBottom title='Course list'>
+                <CourseList listCourses={this.listCourses} />
+              </BodySectionWithMarginBottom>
+            ) : (
+              <BodySectionWithMarginBottom title='Log in to continue'>
+                <Login />
+              </BodySectionWithMarginBottom>
+            )}
+            <BodySection title="News from the school">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis at tempora odio, necessitatibus repudiandae reiciendis cum nemo sed asperiores ut molestiae eaque aliquam illo ipsa
+                iste vero dolor voluptates.
+              </p>
+            </BodySection>
+          </div>
+          <div className={css(styles.Footer)}>
+            <Footer />
+          </div>
         </div>
       </React.Fragment>
     );
@@ -79,6 +83,16 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderBottom: '3px solid #e0354b'
   },
+  Body: {
+    minHeight: '50vh'
+  },
+  Footer: {
+    fontSize: '1rem',
+    padding: '1.2rem',
+    textAlign: 'center',
+    fontStyle: 'italic',
+    borderTop: '3px solid #e0354b'
+  }
 })
 
 App.defaultProps = {
