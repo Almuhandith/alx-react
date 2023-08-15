@@ -41,10 +41,12 @@ class App extends React.Component {
 
   handleDisplayDrawer() {
     this.setState({ displayDrawer: true });
+    console.log('display drawer clicked')
   }
 
   handleHideDrawer() {
     this.setState({ displayDrawer: false });
+    console.log('displayDrawer closed')
   }
 
   componentDidMount() {

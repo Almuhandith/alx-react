@@ -25,9 +25,7 @@ class Notifications extends Component {
       <React.Fragment>
         {!this.props.displayDrawer ? (
           <div className={css(styles.menuItem)} 
-          onClick={(e) => {
-            console.log('notifications clicked')
-            this.props.handleDisplayDrawer()}}>
+          onClick={this.props.handleDisplayDrawer}>
             <p>Your notifications</p>
           </div>
         ) : (
@@ -46,10 +44,7 @@ class Notifications extends Component {
                 outline: "none",
               }}
               aria-label="Close"
-              onClick={(e) => {
-                console.log("Close button has been clicked");
-                this.props.handleHideDrawer();
-              }}
+              onClick={this.props.handleHideDrawer}
             >
               <img src={closeIcon} alt="close icon" width="10px" />
             </button>
