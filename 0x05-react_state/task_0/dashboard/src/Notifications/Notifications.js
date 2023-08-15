@@ -21,11 +21,17 @@ class Notifications extends Component {
   }
 
   render() {
+    const {
+      displayDrawer,
+      listNotifications,
+      handleDisplayDrawer,
+      handleHideDrawer,
+    } = this.props;
     return (
       <React.Fragment>
-        {!this.props.displayDrawer ? (
+        {!displayDrawer ? (
           <div className={css(styles.menuItem)} 
-          onClick={this.props.handleDisplayDrawer}>
+          onClick={handleDisplayDrawer}>
             <p>Your notifications</p>
           </div>
         ) : (
@@ -44,14 +50,14 @@ class Notifications extends Component {
                 outline: "none",
               }}
               aria-label="Close"
-              onClick={this.props.handleHideDrawer}
+              onClick={handleHideDrawer}
             >
               <img src={closeIcon} alt="close icon" width="10px" />
             </button>
-            {this.props.listNotifications.length != 0 ? <p>Here is the list of notifications</p> : null}
+            {listNotifications.length != 0 ? <p>Here is the list of notifications</p> : null}
             <ul>
-              {this.props.listNotifications.length == 0 ? <NotificationItem type="default" value="No new notification for now" /> : null}
-              {this.props.listNotifications.map((val, idx) => {
+              {listNotifications.length == 0 ? <NotificationItem type="default" value="No new notification for now" /> : null}
+              {listNotifications.map((val, idx) => {
                 return <NotificationItem type={val.type} value={val.value} html={val.html} key={val.id} markAsRead={this.markAsRead} id={val.id} />;
               })}
             </ul>
